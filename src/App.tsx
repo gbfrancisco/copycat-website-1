@@ -2,9 +2,7 @@ import { useState } from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
-  const test = {
-    some: 'property',
-  };
+  const test = { some: 'property' };
   return (
     <>
       <div>{test.some}</div>

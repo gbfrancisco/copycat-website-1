@@ -3,8 +3,9 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:react-hooks/recommended',
+    'plugin:sonarjs/recommended',
+    'plugin:@typescript-eslint/recommended-type-checked'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -14,6 +15,8 @@ module.exports = {
   },
   plugins: [
     'react-refresh',
+    'sonarjs',
+    '@stylistic',
     '@typescript-eslint'
   ],
   rules: {
@@ -21,6 +24,8 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    quotes: ['error', 'single']
+    '@stylistic/object-curly-spacing': ['error', 'always'],
+    '@stylistic/comma-dangle': ['error', 'never'],
+    '@stylistic/quotes': ['error', 'single']
   },
 }
