@@ -24,8 +24,10 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    '@stylistic/object-curly-spacing': ['error', 'always'],
     '@stylistic/comma-dangle': ['error', 'never'],
-    '@stylistic/quotes': ['error', 'single']
+    '@stylistic/object-curly-spacing': ['error', 'always'],
+    '@stylistic/indent': ['error', 2],
+    '@stylistic/quotes': ['error', 'single'],
+    '@stylistic/semi': ['error', 'always']
   },
 }
