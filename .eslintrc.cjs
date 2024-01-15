@@ -3,6 +3,8 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:sonarjs/recommended',
     'plugin:@typescript-eslint/recommended-type-checked'
@@ -12,14 +14,20 @@ module.exports = {
   parserOptions: {
     project: true,
     tsconfigRootDir: __dirname,
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   plugins: [
+    'react',
     'react-refresh',
     'sonarjs',
     '@stylistic',
     '@typescript-eslint'
   ],
   rules: {
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-tag-spacing': ['error', { beforeSelfClosing: 'always' }],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
