@@ -32,7 +32,7 @@ module.exports = {
     '@stylistic/comma-dangle': ['error', 'never'],
     '@stylistic/object-curly-spacing': ['error', 'always'],
     '@stylistic/indent': ['error', 2],
-    '@stylistic/quotes': ['error', 'single'],
+    '@stylistic/quotes': ['error', 'single', { 'avoidEscape': true }],
     '@stylistic/semi': ['error', 'always']
-  },
-}
+  }
+};

@@ -1,16 +1,13 @@
-import { useState } from 'react';
+import Header from './components/common/Header.tsx';
+import { Outlet } from 'react-router-dom';
 
-function App() {
-  const [count, setCount] = useState(0);
-  const test = { some: 'property' };
+const App = () => {
   return (
     <>
-      <div>{test.some}</div>
-      <button onClick={() => setCount((count) => count + 1)}>
-        Counter: {count}
-      </button>
+      <Header />
+      <Outlet />
     </>
   );
-}
+};
 
 export default App;
