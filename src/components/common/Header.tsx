@@ -1,14 +1,25 @@
 import { Link } from 'react-router-dom';
 import Select from './Select.tsx';
+import { useState } from 'react';
 
 const Header = () => {
-  const languages = ['English', 'Japanese', 'Korean'];
+  const [languageSelectValue, setLanguageSelectValue] = useState<number | string>('en');
+  const languages = [
+    { value: 'en', display: 'English' },
+    { value: 'ja', display: 'Japanese' },
+    { value: 'ko', display: 'Korean' }
+  ];
 
   return (
     <nav>
       <div className="header-language bg-yellow-400 py-5 px-3.5">
         <div className="language-selection-container flex justify-end">
-          <Select options={languages} />
+          <Select
+            value={languageSelectValue}
+            options={languages}
+            onSelect={setLanguageSelectValue}
+            style={{ width: '110px' }}
+          />
         </div>
       </div>
       <div className="header-main py-7 pb-3 px-3.5">
