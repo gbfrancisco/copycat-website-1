@@ -42,7 +42,7 @@ const Header = () => {
         </div>
       </div>
       <div className="header-sub-list py-4 px-3.5">
-        <ul className="flex w-[1200px] mx-auto">
+        <ul className="flex max-w-[1200px] mx-auto">
           <Link className="mr-14 py-1 font-semibold" to="/">
             Home
           </Link>
